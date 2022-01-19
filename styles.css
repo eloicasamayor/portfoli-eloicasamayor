@@ -1,0 +1,107 @@
+body {
+  background-color: beige;
+}
+h1 {
+  margin-top: 150px;
+  font-size: 80px;
+  text-align: center;
+}
+h2 {
+  font-size: 80px;
+}
+nav {
+  padding: 0 10% 0 10%;
+  display: flex;
+  justify-content: space-around;
+}
+nav a {
+  display: inline-flex;
+  font-size: 18px;
+  text-decoration: none;
+}
+.link-center-home {
+  text-decoration: none;
+  margin-top: 400px;
+  display: grid;
+  justify-content: space-around;
+  color: #24a586;
+  font-size: 20px;
+}
+.about-div {
+  display: flex;
+  align-items: center;
+  margin: 0% 10%;
+}
+mark {
+  background-color: black;
+  color: white;
+}
+.img-about_me {
+  border-radius: 50%;
+  width: 300px;
+}
+li {
+  list-style-type: none;
+}
+.social {
+  display: inline-block;
+  text-align: center;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: #24a586;
+}
+.social-media-list {
+  display: inline;
+}
+section {
+  height: 100%;
+  margin: 0% 10%;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 50px;
+  border-radius: 5px;
+  height: 200px;
+  background-color: #f0f0f0;
+}
+input {
+  height: 40px;
+  width: 200px;
+  border-width: 0px;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+  font-family: system-ui;
+}
+textarea {
+  border-radius: 5px;
+  resize: none;
+  width: 90%;
+  margin: 5px;
+  border-width: 0px;
+  border: none;
+  font-family: system-ui;
+}
+.boleta-nav {
+  height: 20px;
+  width: 20px;
+  background-color: #24a586;
+  border-radius: 20px;
+}
+.form-button {
+  margin: 5px;
+  border-radius: 5px;
+  border-width: 0px;
+  border: none;
+  height: 40px;
+  width: 200px;
+  background-color: #7c7c7c;
+  float: right;
+}
+footer {
+  display: flex;
+  justify-content: space-around;
+}
