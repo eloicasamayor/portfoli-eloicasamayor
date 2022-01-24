@@ -24,7 +24,7 @@ h2 {
 p {
   font-size: 1.3rem;
 }
-nav {
+.menu-principal {
   height: 50px;
   padding: 0 10% 0 10%;
   display: flex;
@@ -154,6 +154,9 @@ footer {
   justify-content: space-around;
   color: white;
 }
+.menu-mobile {
+  display: none;
+}
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
@@ -165,5 +168,11 @@ footer {
   }
   section {
     padding: 0;
+  }
+  .menu-mobile {
+    display: block;
+  }
+  .menu-mobile: .menu-principal {
+    display: none;
   }
 }
