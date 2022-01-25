@@ -21,8 +21,13 @@ h2 {
   margin: 0px;
   font-size: 80px;
 }
+h3,
+h4 {
+  margin: 5px 0px;
+}
 p {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+  margin: 5px 0px;
 }
 .menu-principal {
   height: 50px;
@@ -106,6 +111,24 @@ section {
 
 #portfolio {
   height: auto;
+}
+#portfolio ul {
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  gap: 5px;
+}
+#portfolio ul li {
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 10px;
+  min-width: 300px;
+}
+#portfolio ul li h3 {
+  margin: -30px 0px 30px 0px;
+}
+#portfolio ul li mark {
+  padding: 0.5em 1em;
 }
 form {
   display: flex;
