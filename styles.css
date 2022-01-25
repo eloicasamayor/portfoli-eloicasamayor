@@ -195,7 +195,7 @@ footer {
   .menu-mobile {
     display: block;
   }
-  .menu-mobile: .menu-principal {
+  .menu-principal {
     display: none;
   }
 }
