@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+    />
     <title>Portfolio Eloi Casamayor</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="sticky">
-      <div class="menu-mobile"><a href="#">menu mobil</a></div>
+      <div class="menu-mobile">
+        <a id="toggle-menu-mobile" href="#" onclick="toggleMenuMobil()"
+          >menu mobil</a
+        >
+        <nav id="menu-gran">
+          <a href="#">Home</a>
+          <a href="#about_me">About me</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
       <nav class="menu-principal">
         <a href="#">Home</a>
         <a href="#about_me">About me</a>
@@ -16,12 +30,12 @@
     </header>
 
     <section id="home">
-      <h1>Eloi Casamayor<br /><mark>Web developer.</mark></h1>
+      <h1>Eloi Casamayor<br /><mark>Web developer</mark></h1>
       <a class="link-center-home" href="#contact">Contact me</a>
     </section>
 
     <section id="about_me">
-      <h2><mark>About me.</mark></h2>
+      <h2><mark>About me</mark></h2>
       <div class="about-div">
         <p class="about-text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
@@ -82,6 +96,19 @@
             width="250px"
           />
         </li>
+        <li>
+          <h3><mark>Projecte 4</mark></h3>
+          <h4>Descripcio del projecte 4</h4>
+          <p>
+            Text d'explicació del projecte 3 amb totes les caracteristiques i
+            etc etc.
+          </p>
+          <img
+            src="https://git.az/source/services/2/photo/original/web.jpg"
+            alt="imatge de projecte 1"
+            width="250px"
+          />
+        </li>
       </ul>
       <div>
         <div class="boleta-nav" id="boleta1"></div>
@@ -91,36 +118,52 @@
     </section>
     <section id="contact">
       <h2><mark>Contact me</mark></h2>
-      <h3>Send me a message</h3>
-      <form>
-        <input type="text" name="name" placeholder="Your name" />
-        <input type="email" name="email" placeholder="Your email" />
-        <textarea
-          name="message"
-          rows="4"
-          cols="50"
-          placeholder="Your message"
-          resiz
-        ></textarea>
-        <button class="form-button">Send</button>
-      </form>
-      <h3>My social media</h3>
-      <ul class="social-media-list">
-        <a href="http://www.linkedin.com/in/eloicasamayor"
-          ><li class="social">Linkedin</li></a
-        >
-        <a href="mailto:eloi.casamayor@gmail.com"
-          ><li class="social">Email</li></a
-        >
-        <a href="http://www.twitter.com/eloicasamayor"
-          ><li class="social">twitter</li></a
-        >
-        <a href="http://www.github.com/eloicasamayor"
-          ><li class="social">Github</li></a
-        >
-      </ul>
+      <div class="content-contact">
+        <div class="contact-form">
+          <h3>Send me a message</h3>
+          <form
+            action="https://formcarry.com/s/o4OXzU8PvVa"
+            method="POST"
+            accept-charset="UTF-8"
+            target="_blank"
+          >
+            <input type="text" name="name" placeholder="Your name" />
+            <input type="email" name="email" placeholder="Your email" />
+            <textarea
+              name="message"
+              rows="4"
+              cols="50"
+              placeholder="Your message"
+              resiz
+            ></textarea>
+            <input class="form-button" type="submit" value="Submit" />
+          </form>
+        </div>
+        <div class="social-media-content">
+          <h3>My social media</h3>
+          <ul class="social-media-list">
+            <a href="http://www.linkedin.com/in/eloicasamayor"
+              ><li class="social">Linkedin</li></a
+            >
+            <a href="mailto:eloi.casamayor@gmail.com"
+              ><li class="social">Email</li></a
+            >
+            <a href="http://www.twitter.com/eloicasamayor"
+              ><li class="social">twitter</li></a
+            >
+            <a href="http://www.github.com/eloicasamayor"
+              ><li class="social">Github</li></a
+            >
+          </ul>
+        </div>
+      </div>
     </section>
 
     <footer>Aquest és el footer ©copyright Eloi Casamayor 2022</footer>
+    <script>
+      function toggleMenuMobil() {
+        document.getElementById("menu-gran").classList.toggle("hidden");
+      }
+    </script>
   </body>
 </html>
