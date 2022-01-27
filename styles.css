@@ -38,7 +38,7 @@ p {
 .sticky {
   background-color: beige;
   position: fixed;
-  top: 0;
+  top: 20px;
   width: 100%;
 }
 nav a {
@@ -64,10 +64,22 @@ nav a:visited {
   margin-top: 12rem;
 }
 .about-div {
-  padding: 2rem;
   gap: 1rem;
   display: flex;
   flex-direction: column;
+}
+.about-text {
+  padding: 1em;
+}
+.about-div p::first-letter {
+  padding: 5px;
+  margin-right: 5px;
+  border: 1px solid;
+  font-weight: bold;
+  color: #24a586;
+  font-size: 3em;
+  font-weight: bold;
+  float: left;
 }
 
 .img-about_me {
@@ -87,6 +99,7 @@ li {
 .social-media-list {
   display: flex;
   justify-content: space-evenly;
+  padding: 0;
 }
 .social {
   text-align: center;
@@ -118,16 +131,24 @@ section {
   padding-top: 20px;
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
+  gap: 10px;
   min-height: 200px;
   width: 100%;
 }
 #portfolio ul li {
-  border: 1px solid black;
+  width: 300px;
+  flex: 1;
+  margin-bottom: 2em;
+}
+.tarjeta {
+  background-color: rgba(255, 255, 255, 0.7);
   padding: 20px;
   border-radius: 10px;
-  width: 300px;
 }
+.sombra {
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.7);
+}
+
 #portfolio ul li h3 {
   margin: -30px 0px 30px 0px;
 }
@@ -187,7 +208,7 @@ footer {
 #toggle-menu-mobile {
   display: block;
   width: 100px;
-  height: 100px;
+  float: right;
 }
 #menu-gran {
   display: flex;
@@ -206,6 +227,10 @@ footer {
   flex-wrap: wrap;
   gap: 2em;
 }
+.contact-form,
+.social-media-content {
+  flex: 1;
+}
 
 @media (max-width: 601px) {
   /* For mobile phones: */
@@ -219,12 +244,16 @@ footer {
     font-size: 3.5rem;
   }
   section {
-    padding: 0;
+    padding: 0em 0.4em;
   }
+
   .menu-mobile {
     display: block;
   }
   .menu-principal {
     display: none;
+  }
+  .about-div {
+    padding: 0;
   }
 }
