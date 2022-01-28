@@ -9,28 +9,16 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <a
-      class="menu-mobile"
-      id="toggle-menu-mobile"
-      href="#"
-      onclick="toggleMenuMobil()"
-      >menu mobil</a
-    >
     <header class="sticky">
-      <div class="menu-mobile">
-        <nav id="menu-gran">
-          <a href="#">Home</a>
+      <div id="menu" class="menu-hidden">
+        <nav>
+          <a href="#home">Home</a>
           <a href="#about_me">About me</a>
           <a href="#portfolio">Portfolio</a>
           <a href="#contact">Contact</a>
         </nav>
       </div>
-      <nav class="menu-principal">
-        <a href="#">Home</a>
-        <a href="#about_me">About me</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
-      </nav>
+      <a id="toggle-menu-mobile" href="#" onclick="toggleMenuMobil()">☰</a>
     </header>
 
     <section id="home">
@@ -162,7 +150,12 @@
     <footer>Aquest és el footer ©copyright Eloi Casamayor 2022</footer>
     <script>
       function toggleMenuMobil() {
-        document.getElementById("menu-gran").classList.toggle("hidden");
+        document.querySelector("#menu").classList.toggle("menu-hidden");
+        if (document.querySelector("#toggle-menu-mobile").innerHTML === "✕") {
+          document.querySelector("#toggle-menu-mobile").innerHTML = "☰";
+        } else {
+          document.querySelector("#toggle-menu-mobile").innerHTML = "✕";
+        }
       }
     </script>
   </body>

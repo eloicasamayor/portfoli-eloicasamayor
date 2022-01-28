@@ -29,27 +29,40 @@ p {
   font-size: 1.2rem;
   margin: 5px 0px;
 }
-.menu-principal {
-  height: 50px;
-  padding: 0 10% 0 10%;
+/***************************************
+ MENU 
+*/
+#menu {
+  background-color: beige;
+}
+#menu nav {
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+#menu nav a {
+  flex: 1;
+  padding: 1em 0;
+  text-align: center;
+  font-size: 1.3em;
 }
 .sticky {
-  background-color: beige;
   position: fixed;
-  top: 20px;
+  top: 0;
   width: 100%;
 }
-nav a {
-  color: #24a586;
-  display: inline-flex;
-  font-size: 18px;
-  align-items: center;
+#toggle-menu-mobile {
+  display: none;
+  float: right;
+  padding: 0.9em;
+  height: 75px;
+  width: 75px;
+  font-size: 1.8em;
+  line-height: 0.9em;
+  color: beige;
 }
-nav a:visited {
-  color: #24a586;
-}
+
+/***************************************/
 .frase-home {
   font-style: italic;
   font-size: 2rem;
@@ -203,25 +216,7 @@ footer {
   justify-content: space-around;
   color: white;
 }
-.menu-mobile {
-  display: none;
-}
-#toggle-menu-mobile {
-  display: block;
-  width: 100px;
-  float: right;
-}
-#menu-gran {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.hidden {
-  display: none !important;
-}
-#menu-gran a {
-  height: 50px;
-}
+
 .content-contact {
   display: flex;
   justify-content: flex-start;
@@ -237,9 +232,6 @@ footer {
   /* For mobile phones: */
   body {
     background-color: cornflowerblue;
-  }
-  nav a {
-    font-size: 1.2em;
   }
   h1 {
     font-size: 3.5em;
@@ -259,12 +251,7 @@ footer {
   form {
     padding: 2em 0.8em;
   }
-  .menu-mobile {
-    display: block;
-  }
-  .menu-principal {
-    display: none;
-  }
+
   .about-div {
     padding: 0;
   }
@@ -284,4 +271,19 @@ footer {
   .social {
     width: 80px;
     height: 80px;
+  }
+  /*************************************
+  MENU
+  */
+  #toggle-menu-mobile {
+    display: block;
+  }
+  #menu nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .menu-hidden {
+    display: none;
+  }
 }
