@@ -130,7 +130,7 @@ li {
 }
 
 section {
-  height: 100vh;
+  min-height: 100vh;
   margin: 0px;
   padding: 5rem 10%;
   align-content: space-between;
@@ -250,7 +250,6 @@ footer {
     padding: 10px;
   }
   section {
-    height: auto;
     padding: 0em 0.4em;
   }
   form {
