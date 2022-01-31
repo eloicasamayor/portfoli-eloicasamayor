@@ -81,7 +81,7 @@ p {
   display: flex;
   flex-direction: column;
 }
-.about-text {
+.about-div p {
   padding: 1em;
 }
 .about-div p::first-letter {
@@ -238,14 +238,19 @@ footer {
   }
   h2 {
     font-size: 2.9em;
+    padding: 0.2em 0;
   }
   h3 {
     font-size: 1.8em;
+  }
+  p {
+    font-size: 1em;
   }
   #portfolio ul li mark {
     padding: 10px;
   }
   section {
+    height: auto;
     padding: 0em 0.4em;
   }
   form {
@@ -254,6 +259,11 @@ footer {
 
   .about-div {
     padding: 0;
+    gap: 0.5em;
+  }
+
+  .img-about_me {
+    width: 180px;
   }
   input,
   textarea {
