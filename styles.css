@@ -16,6 +16,22 @@ h1 {
   font-size: 80px;
   text-align: center;
 }
+mark {
+  background-color: #2c2c2c;
+  color: white;
+  padding: 0rem 1rem;
+}
+h1 mark span {
+  color: white;
+}
+h1 span.lletra-girada-esquerra {
+  display: inline-block;
+  transform: rotateZ(350deg);
+}
+h1 span.lletra-girada-dreta {
+  display: inline-block;
+  transform: rotateZ(10deg);
+}
 h2 {
   padding: 2rem 0rem;
   margin: 0px;
@@ -25,15 +41,29 @@ h3,
 h4 {
   margin: 5px 0px;
 }
+#home {
+  padding: 0px;
+}
 p {
   font-size: 1.2rem;
   margin: 5px 0px;
+}
+.svg-dalt {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+}
+.svg-baix {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
 }
 /***************************************
  MENU 
 */
 #menu {
-  background-color: beige;
+  background-color: transparent;
 }
 #menu nav {
   display: flex;
@@ -47,7 +77,8 @@ p {
   font-size: 1.3em;
 }
 .sticky {
-  position: fixed;
+  flex-direction: row-reverse;
+  /*position: fixed;*/
   top: 0;
   width: 100%;
 }
@@ -59,7 +90,6 @@ p {
   width: 75px;
   font-size: 1.8em;
   line-height: 0.9em;
-  color: beige;
 }
 
 /***************************************/
@@ -74,15 +104,17 @@ p {
   justify-content: space-around;
   color: #24a586;
   font-size: 20px;
-  margin-top: 12rem;
+  margin-top: 12em;
 }
 .about-div {
   gap: 1rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .about-div p {
   padding: 1em;
+  max-width: 500px;
 }
 .about-div p::first-letter {
   padding: 5px;
@@ -100,40 +132,51 @@ p {
   width: 300px;
   place-self: center;
 }
-mark {
-  background-color: #2c2c2c;
-  color: white;
-  padding: 0rem 1rem;
-}
 
 li {
   list-style-type: none;
 }
 .social-media-list {
   display: flex;
+  gap: 1em;
   justify-content: space-evenly;
   padding: 0;
+}
+.social span,
+.social i:hover {
+  background-color: transparent;
+}
+.social-media-list a {
+  flex: 1;
 }
 .social {
   text-align: center;
   height: 100px;
-  width: 100px;
-  border-radius: 50%;
-  background-color: #24a586;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   font-weight: bold;
+}
+.social i {
+  font-size: 2em;
 }
 .social :hover {
   background-color: #19745e;
 }
-
+.detall-compte-social {
+  font-size: 0.8em;
+}
 section {
+  position: relative;
+  padding: 0;
+  font-size: 0.9em;
   min-height: 100vh;
   margin: 0px;
-  padding: 5rem 10%;
+}
+.section-wrapper {
   align-content: space-between;
+  padding: 5rem 10%;
 }
 
 #portfolio {
@@ -150,9 +193,12 @@ section {
   width: 100%;
 }
 #portfolio ul li {
-  width: 300px;
+  min-width: 350px;
   flex: 1;
   margin-bottom: 2em;
+}
+#portfolio ul li img {
+  width: 100%;
 }
 .tarjeta {
   background-color: rgba(255, 255, 255, 0.7);
@@ -214,6 +260,9 @@ footer {
   height: 50px;
   display: flex;
   justify-content: space-around;
+}
+
+footer p {
   color: white;
 }
 
@@ -230,11 +279,8 @@ footer {
 
 @media (max-width: 601px) {
   /* For mobile phones: */
-  body {
-    background-color: cornflowerblue;
-  }
   h1 {
-    font-size: 3.5em;
+    font-size: 3.2em;
   }
   h2 {
     font-size: 2.9em;
@@ -243,14 +289,27 @@ footer {
   h3 {
     font-size: 1.8em;
   }
+  .sticky {
+    position: fixed;
+  }
+  #menu {
+    background-color: #24a586;
+  }
+
   p {
     font-size: 1em;
+  }
+  .about-div p {
+    max-width: 350px;
+  }
+  #portfolio ul li {
+    min-width: 220px;
   }
   #portfolio ul li mark {
     padding: 10px;
   }
   section {
-    padding: 0em 0.4em;
+    padding: 0;
   }
   form {
     padding: 2em 0.8em;
@@ -278,8 +337,7 @@ footer {
     flex-direction: column;
   }
   .social {
-    width: 80px;
-    height: 80px;
+    height: 100px;
   }
   /*************************************
   MENU
@@ -294,5 +352,11 @@ footer {
   }
   .menu-hidden {
     display: none;
+  }
+  .link-center-home {
+    margin-top: 4em;
+  }
+  footer {
+    font-size: 0.8em;
   }
 }
