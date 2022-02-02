@@ -39,6 +39,7 @@
 
     <section id="home">
       <h1>Eloi Casamayor<br /><mark>Web developer</mark></h1>
+      <div class="pilota-animada"></div>
       <a class="link-center-home" href="#contact">Contact me</a>
       <svg
         class="svg-baix"
@@ -71,10 +72,12 @@
         <h2><mark>About me</mark></h2>
         <div class="about-div">
           <img
-            class="img-about_me"
-            src="https://pbs.twimg.com/profile_images/1410601337499262983/l8vB3uzO_400x400.jpg"
+            class="img-about_me sombra"
+            src="eloi-sense-background.png"
             alt="Eloi Casamayor"
           />
+          <div class="img-wrapper"></div>
+
           <p class="tarjeta sombra">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
             vehicula convallis urna ac semper. Sed nisl nulla, bibendum a tellus
@@ -119,6 +122,8 @@
           <li class="tarjeta sombra">
             <h3><mark>Projecte 1</mark></h3>
             <h4>Descripcio del projecte 1</h4>
+            <span class="portfolio-tag">HTML</span>
+            <span class="portfolio-tag">React</span>
             <p>
               Text d'explicació del projecte 1 amb totes les caracteristiques i
               etc etc.
@@ -132,6 +137,8 @@
           <li class="tarjeta sombra">
             <h3><mark>Projecte 2</mark></h3>
             <h4>Descripcio del projecte 2</h4>
+
+            <span class="portfolio-tag">UI Design</span>
             <p>
               Text d'explicació del projecte 2 amb totes les caracteristiques i
               etc etc.
@@ -145,6 +152,8 @@
           <li class="tarjeta sombra">
             <h3><mark>Projecte 3</mark></h3>
             <h4>Descripcio del projecte 3</h4>
+            <span class="portfolio-tag">HTML</span>
+            <span class="portfolio-tag">React</span>
             <p>
               Text d'explicació del projecte 3 amb totes les caracteristiques i
               etc etc.
@@ -158,6 +167,8 @@
           <li class="tarjeta sombra">
             <h3><mark>Projecte 4</mark></h3>
             <h4>Descripcio del projecte 4</h4>
+            <span class="portfolio-tag">CSS</span>
+            <span class="portfolio-tag">Design</span>
             <p>
               Text d'explicació del projecte 3 amb totes les caracteristiques i
               etc etc.
@@ -267,9 +278,10 @@
       </svg>
     </section>
 
-    <footer><p>Aquest és el footer ©copyright Eloi Casamayor 2022</p></footer>
+    <footer><p>©copyright Eloi Casamayor 2022</p></footer>
     <script>
       document.getElementById("toggle-menu-mobile").onclick = function () {
+        console.log("hola!");
         document.querySelector("#menu").classList.toggle("menu-hidden");
 
         if (document.querySelector("#toggle-menu-mobile").innerHTML === "✕") {
